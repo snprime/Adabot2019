@@ -29,7 +29,7 @@ public class HatchLoader extends Subsystem {
     support.set(DoubleSolenoid.Value.kForward);
   }
 
-  public void lowerHatch() {
+  public void deploy() {
     loader.set(DoubleSolenoid.Value.kForward);
   }
 
