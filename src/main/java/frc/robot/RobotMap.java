@@ -62,10 +62,10 @@ public class RobotMap {
   public static int intakeBack = 5; //solenoid 2
   public static int hatchLowerFront = 0; //solenoid 5 on pcm1
   public static int hatchLowerRear = 1; //solenoid 5 on pcm1
-  public static int hatchUpperFront = 4; //solenoid 4
-  public static int hatchUpperRear = 9; //solenoid 4
-  public static int suctionFront = 3; //solenoid 3
-  public static int suctionRear = 7; //solenoid 3
+  public static int hatchUpperFront = 3; //solenoid 4
+  public static int hatchUpperRear = 7; //solenoid 4
+  public static int suctionFront = 6; //solenoid 3
+  public static int suctionRear = 2; //solenoid 3
   public static int transmissionFront = 0; //solenoid 1
   public static int transmissionBack = 4; //solenoid 1
   

@@ -13,15 +13,15 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 
 public class HatchLoader extends Subsystem {
-  DoubleSolenoid loader = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.hatchUpperFront, RobotMap.hatchUpperRear);
-  DoubleSolenoid support = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.hatchLowerFront, RobotMap.hatchLowerRear);
-  DoubleSolenoid suction = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.suctionFront, RobotMap.suctionRear);
+  DoubleSolenoid loader = null; //new DoubleSolenoid(RobotMap.pcm1_id, RobotMap.hatchUpperFront, RobotMap.hatchUpperRear);
+  DoubleSolenoid support = null; //new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.hatchLowerFront, RobotMap.hatchLowerRear);
+  DoubleSolenoid suction = null; //new DoubleSolenoid(RobotMap.pcm1_id, RobotMap.suctionFront, RobotMap.suctionRear);
 
 
   public HatchLoader() {
-    loader = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.hatchUpperFront, RobotMap.hatchUpperRear);
+    loader = new DoubleSolenoid(RobotMap.pcm1_id, RobotMap.hatchUpperFront, RobotMap.hatchUpperRear);
     support = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.hatchLowerFront, RobotMap.hatchLowerRear);
-    suction = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.suctionFront, RobotMap.suctionRear);  
+    suction = new DoubleSolenoid(RobotMap.pcm1_id, RobotMap.suctionFront, RobotMap.suctionRear);
   }
 
 
@@ -42,7 +42,8 @@ public class HatchLoader extends Subsystem {
   }
 
   public void suctionOff() {
-    suction.set(DoubleSolenoid.Value.kOff);
+    suction.set(DoubleSolenoid.Value.kReverse);
+    System.out.println("We're Released!!!");
   }
   
   @Override

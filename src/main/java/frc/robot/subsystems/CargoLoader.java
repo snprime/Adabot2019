@@ -21,6 +21,8 @@ public class CargoLoader extends Subsystem {
     motorFrontMech = new WPI_VictorSPX(RobotMap.frontMechanismMotorID);
     motorRearMech = new WPI_VictorSPX(RobotMap.rearMechanismMotorID);
 
+    motorRearMech.setInverted(true);
+
     motorRearMech.follow(motorFrontMech);
   }
 	

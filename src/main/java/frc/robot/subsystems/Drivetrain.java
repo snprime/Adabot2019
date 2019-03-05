@@ -44,7 +44,7 @@ public class Drivetrain extends Subsystem {
     public void teleopDrive(double move, double turn)
     {
       double limiter = 0.65;
-		  drive.arcadeDrive(move, turn*limiter);
+		  drive.arcadeDrive(move*limiter, turn*limiter);
     }
 
     /*public void setGear(DoubleSolenoid.Value gear) {

@@ -31,13 +31,13 @@ public class OI {
   public JoystickButton fireCargoButton = new JoystickButton(stick, RobotMap.redButton);
   public JoystickButton lowerHatchButton = new JoystickButton(stick, RobotMap.thumbUp);
   public JoystickButton raiseHatchButton = new JoystickButton(stick, RobotMap.thumbDown);
-  public JoystickButton hatchSuctionButton = new JoystickButton(stick, RobotMap.thumbForward);
-  public JoystickButton hatchReleaseButton = new JoystickButton(stick, RobotMap.thumbBack);
+  public JoystickButton hatchSuctionButton = new JoystickButton(throttle, RobotMap.thumbForward);
+  public JoystickButton hatchReleaseButton = new JoystickButton(throttle, RobotMap.thumbBack);
 
 
   public OI(){
     //Intake Control
-    intakeRunButton.whenPressed(new intakeRun(0.3));
+    intakeRunButton.whenPressed(new intakeRun(-0.75));
     intakeRunButton.whenReleased(new intakeRun(0.0));
 
     //Intake Deploy and Retract
@@ -45,7 +45,7 @@ public class OI {
     intakeRetractButton.whenPressed(new intakeRetract());
     
     //Cargo Ball Launcher Control
-    fireCargoButton.whenPressed(new fireCargo(0.6));
+    fireCargoButton.whenPressed(new fireCargo(-0.75));
     fireCargoButton.whenReleased(new fireCargo(0.0));
 
     //Hatch Deploy and Retract

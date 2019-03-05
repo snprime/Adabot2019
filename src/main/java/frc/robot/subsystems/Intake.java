@@ -17,11 +17,11 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 
 public class Intake extends Subsystem {
   WPI_VictorSPX motorIntake = new WPI_VictorSPX(RobotMap.intakeMotorID);
-  DoubleSolenoid deployIntake = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.intakeFront, RobotMap.intakeBack);
+  DoubleSolenoid deployIntake = null; //new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.intakeFront, RobotMap.intakeBack);
 
   public Intake() {
     motorIntake = new WPI_VictorSPX(RobotMap.intakeMotorID);
-    deployIntake = new DoubleSolenoid(RobotMap.pcm2_id, RobotMap.intakeFront, RobotMap.intakeBack);
+    deployIntake = new DoubleSolenoid(RobotMap.pcm1_id, RobotMap.intakeFront, RobotMap.intakeBack);
   }
 
   public void deploy() {
