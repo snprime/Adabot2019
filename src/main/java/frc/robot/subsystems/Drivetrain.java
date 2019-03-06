@@ -46,17 +46,18 @@ public class Drivetrain extends Subsystem {
 		  drive.arcadeDrive(move*moveLimiter, turn*turnLimiter);
     }
 
-    /*public void setGear(DoubleSolenoid.Value gear) {
+    public void setGear(DoubleSolenoid.Value gear) {
       gearSwitcher.set(gear);
     }
   
     public void switchGear() {
       DoubleSolenoid.Value current_gear = gearSwitcher.get();
+
       if (current_gear == DoubleSolenoid.Value.kForward){
-        gearSwitcher.set(Value.kBackward);
+        gearSwitcher.set(DoubleSolenoid.Value.kReverse);
       }
-      gearSwitcher.set(!current_gear);
-    }*/
+      //gearSwitcher.set(!current_gear);
+    }
 
     public void initDefaultCommand()
     {

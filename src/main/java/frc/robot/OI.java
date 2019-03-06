@@ -63,6 +63,6 @@ public class OI {
     hatchReleaseButton.whenPressed(new hatchSuctionOff());
 
     //CHange Gears
-    //switchGear.whenPressed(new switchGear());
+    switchGear.whenPressed(new switchGear());
   }
 }
