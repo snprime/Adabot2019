@@ -30,11 +30,12 @@ public class OI {
   public JoystickButton intakeDeployButton = new JoystickButton(throttle, RobotMap.topRidgeForward);
   public JoystickButton intakeRetractButton = new JoystickButton(throttle, RobotMap.topRidgeBack);
   //public JoystickButton fireCargoButton = new JoystickButton(stick, RobotMap.redButton);
-  public JoystickButton lowerHatchButton = new JoystickButton(stick, RobotMap.thumbUp);
-  public JoystickButton raiseHatchButton = new JoystickButton(stick, RobotMap.thumbDown);
+  public JoystickButton lowerHatchButton = new JoystickButton(stick, RobotMap.thumbDown);
+  public JoystickButton raiseHatchButton = new JoystickButton(stick, RobotMap.thumbUp);
   public JoystickButton hatchSuctionButton = new JoystickButton(throttle, RobotMap.thumbForward);
   public JoystickButton hatchReleaseButton = new JoystickButton(throttle, RobotMap.thumbBack);
   public JoystickButton cargoEjectButton = new JoystickButton(stick, RobotMap.bottomTrigger);
+  public JoystickButton switchGear = new JoystickButton(throttle, RobotMap.throttleTrigger);
 
 
   public OI(){
@@ -43,6 +44,7 @@ public class OI {
     fireCargoButton.whenPressed(new fireCargo(-0.75));
     intakeOffButton.whenPressed(new intakeRun(0.0));
     intakeOffButton.whenReleased(new intakeRun(0.0));
+    intakeOffButton.whenReleased(new fireCargo(0.0));
 
     //Intake Deploy and Retract
     intakeDeployButton.whenPressed(new intakeDeploy());
@@ -59,5 +61,8 @@ public class OI {
     //Engage and Disengage Hatch Suction
     hatchSuctionButton.whenPressed(new hatchSuctionOn());
     hatchReleaseButton.whenPressed(new hatchSuctionOff());
+
+    //CHange Gears
+    //switchGear.whenPressed(new switchGear());
   }
 }
