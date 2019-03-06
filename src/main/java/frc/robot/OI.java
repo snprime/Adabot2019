@@ -46,9 +46,9 @@ public class OI {
     intakeRetractButton.whenPressed(new intakeRetract());
     
     //Cargo Ball Launcher Control
-    fireCargoButton.whenPressed(new fireCargo(-0.40));
+    fireCargoButton.whenPressed(new fireCargo(-0.75));
     fireCargoButton.whenReleased(new fireCargo(0.0));
-    cargoEjectButton.whenPressed(new fireCargo(0.40));
+    cargoEjectButton.whenPressed(new fireCargo(0.75));
     cargoEjectButton.whenReleased(new fireCargo(0.00));
 
     //Hatch Deploy and Retract
