@@ -8,10 +8,8 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
-
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-//import com.ctre.phoenix.motorcontrol.ControlMode;
-//import com.sun.jdi.Value;
+
 
 public class Drivetrain extends Subsystem {
     WPI_TalonSRX motorLA = new WPI_TalonSRX(RobotMap.leftRearUpperMotorID);
@@ -43,8 +41,9 @@ public class Drivetrain extends Subsystem {
 	
     public void teleopDrive(double move, double turn)
     {
-      double limiter = 0.65;
-		  drive.arcadeDrive(move*limiter, turn*limiter);
+      double moveLimiter = 0.65;
+      double turnLimiter = 0.55;
+		  drive.arcadeDrive(move*moveLimiter, turn*turnLimiter);
     }
 
     /*public void setGear(DoubleSolenoid.Value gear) {

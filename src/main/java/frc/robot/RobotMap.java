@@ -47,8 +47,8 @@ public class RobotMap {
   public static int thumbForward = 4;
   public static int thumbDown = 5;
   public static int thumbBack = 6;
-  public static int topRidgeForward = 7;
-  public static int topRidgeBack = 8;
+  public static int topRidgeForward = 8;
+  public static int topRidgeBack = 7;
   public static int bottomRidgeForward = 9;
   public static int bottomRidgeBack = 10;
   public static int redSwitchForward = 11;

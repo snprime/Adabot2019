@@ -34,6 +34,7 @@ public class OI {
   public JoystickButton raiseHatchButton = new JoystickButton(stick, RobotMap.thumbDown);
   public JoystickButton hatchSuctionButton = new JoystickButton(throttle, RobotMap.thumbForward);
   public JoystickButton hatchReleaseButton = new JoystickButton(throttle, RobotMap.thumbBack);
+  public JoystickButton cargoEjectButton = new JoystickButton(stick, RobotMap.bottomTrigger);
 
 
   public OI(){
