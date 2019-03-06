@@ -19,7 +19,7 @@ public class Drive extends Command {
     protected void execute() {
         
         double move = Robot.oi.throttle.getZ();
-        double turn = -Robot.oi.stick.getX();
+        double turn = Robot.oi.stick.getX();
 
         Robot.driveTrain.teleopDrive(move, turn);
         

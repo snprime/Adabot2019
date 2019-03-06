@@ -8,10 +8,8 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
-
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-//import com.ctre.phoenix.motorcontrol.ControlMode;
-//import com.sun.jdi.Value;
+
 
 public class Drivetrain extends Subsystem {
     WPI_TalonSRX motorLA = new WPI_TalonSRX(RobotMap.leftRearUpperMotorID);
