@@ -38,7 +38,7 @@ public class OI {
 
   public OI(){
     //Intake Control
-    intakeRunButton.whenPressed(new intakeRun(-0.75));
+    intakeRunButton.whenPressed(new intakeRun(-0.80));
     intakeRunButton.whenReleased(new intakeRun(0.0));
 
     //Intake Deploy and Retract
