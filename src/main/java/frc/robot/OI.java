@@ -13,6 +13,7 @@ import frc.robot.RobotMap;
 import frc.robot.commands.intakeDeploy;
 import frc.robot.commands.intakeRetract;
 import frc.robot.commands.intakeRun;
+import frc.robot.commands.switchGear;
 import frc.robot.commands.fireCargo;
 import frc.robot.commands.hatchDown;
 import frc.robot.commands.hatchSuctionOn;
@@ -62,7 +63,7 @@ public class OI {
     hatchSuctionButton.whenPressed(new hatchSuctionOn());
     hatchReleaseButton.whenPressed(new hatchSuctionOff());
 
-    //CHange Gears
+    //Change Gears
     switchGear.whenPressed(new switchGear());
   }
 }

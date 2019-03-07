@@ -56,7 +56,9 @@ public class Drivetrain extends Subsystem {
       if (current_gear == DoubleSolenoid.Value.kForward){
         gearSwitcher.set(DoubleSolenoid.Value.kReverse);
       }
-      //gearSwitcher.set(!current_gear);
+      if (current_gear == DoubleSolenoid.Value.kReverse){
+        gearSwitcher.set(DoubleSolenoid.Value.kForward);
+      }
     }
 
     public void initDefaultCommand()
