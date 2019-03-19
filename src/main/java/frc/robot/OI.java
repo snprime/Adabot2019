@@ -26,16 +26,14 @@ public class OI {
   public Joystick stick = new Joystick(RobotMap.stickPort);
   public Joystick throttle = new Joystick(RobotMap.throttle);
 
-  public JoystickButton fireCargoButton = new JoystickButton(stick, RobotMap.triggerHalf);
-  public JoystickButton intakeOffButton = new JoystickButton(stick, RobotMap.triggerFull);
+  public JoystickButton fireCargoButton = new JoystickButton(stick, RobotMap.triggerFull);
   public JoystickButton intakeDeployButton = new JoystickButton(throttle, RobotMap.topRidgeForward);
   public JoystickButton intakeRetractButton = new JoystickButton(throttle, RobotMap.topRidgeBack);
-  //public JoystickButton fireCargoButton = new JoystickButton(stick, RobotMap.redButton);
-  public JoystickButton lowerHatchButton = new JoystickButton(stick, RobotMap.thumbDown);
-  public JoystickButton raiseHatchButton = new JoystickButton(stick, RobotMap.thumbUp);
+  public JoystickButton lowerHatchButton = new JoystickButton(throttle, RobotMap.thumbDown);
+  public JoystickButton raiseHatchButton = new JoystickButton(throttle, RobotMap.thumbUp);
   public JoystickButton hatchSuctionButton = new JoystickButton(throttle, RobotMap.thumbForward);
   public JoystickButton hatchReleaseButton = new JoystickButton(throttle, RobotMap.thumbBack);
-  public JoystickButton cargoEjectButton = new JoystickButton(stick, RobotMap.bottomTrigger);
+  public JoystickButton cargoEjectButton = new JoystickButton(stick, RobotMap.redButton);
   public JoystickButton switchGear = new JoystickButton(throttle, RobotMap.throttleTrigger);
 
 
@@ -43,17 +41,16 @@ public class OI {
     //Intake Control
     fireCargoButton.whenPressed(new intakeRun(-0.75));
     fireCargoButton.whenPressed(new fireCargo(-0.75));
-    intakeOffButton.whenPressed(new intakeRun(0.0));
-    intakeOffButton.whenReleased(new intakeRun(0.0));
-    intakeOffButton.whenReleased(new fireCargo(0.0));
+    fireCargoButton.whenReleased(new intakeRun(0.0));
+    fireCargoButton.whenReleased(new fireCargo(0.0));
+
+    //Eject Cargo
+    cargoEjectButton.whenPressed(new fireCargo(0.75));
+    cargoEjectButton.whenReleased(new fireCargo(0.0));
 
     //Intake Deploy and Retract
     intakeDeployButton.whenPressed(new intakeDeploy());
     intakeRetractButton.whenPressed(new intakeRetract());
-    
-    //Cargo Ball Launcher Control
-    //fireCargoButton.whenPressed(new fireCargo(-0.75));
-    //fireCargoButton.whenReleased(new fireCargo(0.0));
 
     //Hatch Deploy and Retract
     lowerHatchButton.whenPressed(new hatchDown());
